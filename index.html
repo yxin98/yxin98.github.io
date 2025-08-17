@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yongxin Ni | Academic Homepage</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
+  <meta property="og:title" content="Yongxin Ni | Academic Homepage">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root{
+      --bg: #ffffff; --fg:#111827; --muted:#6b7280; --link:#2563eb; --card:#f8fafc; --border:#e5e7eb;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b0f19; --fg:#e5e7eb; --muted:#9ca3af; --link:#60a5fa; --card:#121827; --border:#1f2937}
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:880px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);backdrop-filter: blur(6px);}
+    nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    nav .tabs a{padding:10px 12px;border-radius:10px}
+    nav .tabs a:hover{background:var(--card)}
+    .hero{display:block;grid-template-columns:120px 1fr;gap:20px;align-items:center;padding:0px 0}
+    .avatar{width:120px;height:120px;border-radius:16px;background:var(--card);display:grid;place-items:center;border:1px solid var(--border);font-size:56px}
+    h1{margin:0 0 4px 0;font-size:28px;line-height:1.25}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:2px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px;margin-right:6px;color:var(--muted)}
+    section{padding:3px 0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+    .grid{display:grid;gap:14px}
+    .grid.cols-2{grid-template-columns:1fr 1fr}
+    @media (max-width:720px){.hero{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+    /* Publications */
+    .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+    .control{padding:6px 10px;border:1px solid var(--border);border-radius:10px;background:transparent;cursor:pointer}
+    .control.active{background:var(--card)}
+    .pub{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:14px 0;border-bottom:1px dashed var(--border)}
+    .pub:last-child{border-bottom:none}
+    .pub .year{width:50px;text-align:center}
+    .pub .title{font-weight:600}
+    .pub .meta{font-size:14px;color:var(--muted)}
+    .pub .links a{margin-right:10px}
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid var(--border);text-align:center}
+    .top{position:fixed;right:18px;bottom:18px;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--card)}
+    /* Print */
+    @media print{header,.top,.controls{display:none}.container{max-width:100%;padding:0}a{text-decoration:none}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "你的名字",
+    "jobTitle": "PhD Student / Researcher",
+    "affiliation": {"@type":"Organization","name":"Boston University"},
+    "url": "https://yxin98.github.io/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=c4_TincAAAAJ",
+      "https://github.com/yxin98"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><a href="#home" class="muted">Yongxin Ni</a></div>
+        <div class="tabs">
+          <a href="https://scholar.google.com/citations?user=c4_TincAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
+          <a href="#publications">Publications</a>
+          <a href="#service">Service</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <!-- Hero / About -->
+    <section id="about">
+      <!-- <div class="hero"> -->
+        <div>
+          <h1>Yongxin Ni</h1>
+          <p>
+            I am currently a PhD student at Boston University, pursuing my research in information systems and artificial intelligence. Prior to my doctoral studies, I completed my Master’s degree at the National University of Singapore and obtained my Bachelor’s degree from Shenzhen University.
+          </p>
+        </div>
+      <!-- </div> -->
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications/Presentations</h2>
+      <div class="controls">
+        <button class="control active" data-filter="all">全部</button>
+        <button class="control" data-filter="preprint">Preprint</button>
+        <button class="control" data-filter="journal">Journal</button>
+        <button class="control" data-filter="conference">Conference</button>
+      </div>
+      <div id="pub-list">
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Human-Aligned Video Generation Benchmark</div>
+    <div class="meta">Hui Han, Siyuan Li, Jiaqi Chen, Yiwen Yuan, Yuling Wu, Yufan Deng, Chak Tou Leong, Hanwen Du, Junchen Fu, Youhua Li, Jie Zhang, Chi Zhang, Li-jia Li and <b>Yongxin Ni*</b> · <em>CVPR 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Uncertainty-aware Knowledge Tracing</div>
+    <div class="meta">Weihua Cheng, Hanwen Du, Chunxiao Li, Ersheng Ni, Liangdi Tan, Tianqi Xu and <b>Yongxin Ni*</b> · <em>AAAI 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">Dissecting Disposition Effect of Large Language Models in Financial Decisions</div>
+    <div class="meta"><b>Yongxin Ni</b>, Tianqi Xu, Chunxiao Li, Eric Zheng* and Bin Gu* · <em>ICSF 2024 <b>(Track & Final Best Paper Awards)</b></em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">A Content-Driven Micro-Video Recommendation Dataset at Scale</div>
+    <div class="meta"><b>Yongxin Ni</b>, Yu Cheng, Xiangyan Liu, Junchen Fu, Youhua Li, Xiangnan He, Yongfeng Zhang and Fajie Yuan · <em>CIKM 2025 <b>(Invited Talk at Google DeepMind / YouTube / Alipay)</b></em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">Machine Behaviorism: Exploring the Behavioral Dynamics of Large Language Models in Decision Making</div>
+    <div class="meta"><b>Yongxin Ni</b>, Tianqi Xu, Chunxiao Li, Eric Zheng* and Bin Gu* · <em>HICSS 2024</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">Dissecting Disposition Effect of Large Language Models in Financial Decisions</div>
+    <div class="meta"><b>Yongxin Ni</b>, Liangdi Tan, Chunxiao Li, Eric Zheng* and Bin Gu* · <em>WITS 2024</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Bridging the Gap: Teacher-Assisted Wasserstein Knowledge Distillation for Efficient Multi-Modal Recommendation</div>
+    <div class="meta">Ziyi Zhuang, Hanwen Du, Hui Han, Youhua Li, Junchen Fu, Joemon M. Jose and <b>Yongxin Ni*</b> · <em>WWW 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">Teach Me How to Denoise: a Universal Framework for Denoising Multi-modal Recommender Systems via Guided Calibration</div>
+    <div class="meta">Hongji Li, Hanwen Du, Youhua Li, Junchen Fu, Chunxiao Li, Ziyi Zhuang, Jiakang Li and <b>Yongxin Ni*</b> · <em>WSDM 2024</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Frequency-Decoupled Distillation for Efficient Multimodal Recommendation</div>
+    <div class="meta">Ziyi Zhuang, Hongji Li, Junchen Fu, Jiacheng Liu, Joemon Jose, Youhua Li and <b>Yongxin Ni*</b> · <em>CIKM 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">AMBER: Adaptive Meta Balanced Paradigm for Heterogeneous Graph-Based Knowledge Tracing</div>
+    <div class="meta">Lifan Sun, Zichen Yuan, Ersheng Ni, Weihua Cheng, Xinyuan Song, Linkun Dai, Hongwei Jiang, Sibo Xu, Mengmeng Chen, Yucen Zhuang, <b>Yongxin Ni</b> and Youhua Li · <em>CIKM 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">ContrastiveGaussian: High-Fidelity 3D Generation with Contrastive Learning and Gaussian Splatting</div>
+    <div class="meta">Junbang Liu, Enpei Huang, Dongxing Mao, Hui Zhang, Xinyuan Song and <b>Yongxin Ni</b> · <em>ICME 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Data Interpreter: An LLM Agent for Data Science</div>
+    <div class="meta">Sirui Hong, Yizhang Lin, Bang Liu, Bangbang Liu, Binhao Wu, Ceyao Zhang, Danyang Li, Jiaqi Chen, Jiayi Zhang, Jinlin Wang, Li Zhang, Lingyao Zhang, Min Yang, Mingchen Zhuge, Taicheng Guo, Tuo Zhou, Wei Tao, Robert Tang, Xiangtao Lu, Xiawu Zheng, Xinbing Liang, Yaying Fei, Yuheng Cheng, <b>Yongxin Ni</b>, Zhibin Gou, Zongze Xu, Yuyu Luo and Chenglin Wu · <em>ACL Findings 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="journal">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Causality-Inspired Fair Representation Learning for Multimodal Recommendation</div>
+    <div class="meta">Weixin Chen, Li Chen, <b>Yongxin Ni</b>, Yuhan Zhao and Yongfeng Zhang · <em>ACM TOIS, 2025</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="journal">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">NineRec: A Benchmark Dataset Suite for Evaluating Transferable Recommendation</div>
+    <div class="meta">Jiaqi Zhang, Yu Cheng, <b>Yongxin Ni</b>, Yunzhu Pan, Zheng Yuan, Junchen Fu, Youhua Li, Jie Wang, and Fajie Yuan · <em>On Submission to IEEE TPAMI, 2024</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="journal">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">A Comprehensive Review of Community Detection in Graphs</div>
+    <div class="meta">Jiakang Li, Songning Lai, Zhihao Shuai, Yuan Tan, Yifan Jia, Mianyang Yu, Zichen Song, Xiaokang Peng, Ziyang Xu, <b>Yongxin Ni</b>, Haifeng Qiu, Jiayu Yang, Yutong Liu and Yonggang Lu · <em>Neurocomputing, 2024</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">Multi-Modality is All You Need for Transferable Recommender Systems</div>
+    <div class="meta">Youhua Li, Hanwen Du, <b>Yongxin Ni</b>, Pengpeng Zhao, Fajie Yuan, Qi Guo and Xiaofang Zhou · <em>ICDE 2024</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2024</div>
+  <div>
+    <div class="title">An Image Dataset for Benchmarking Recommender Systems with Raw Pixels</div>
+    <div class="meta">Yu Cheng, Yunzhu Pan, Jiaqi Zhang, <b>Yongxin Ni</b>, Aixin Sun and Fajie Yuan · <em>SDM 2024</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2023</div>
+  <div>
+    <div class="title">Online distillation-enhanced multi-modal transformer for sequential recommendation</div>
+    <div class="meta">Wei Ji, Xiangyan Liu, An Zhang, Yinwei Wei, <b>Yongxin Ni</b> and Xiang Wang · <em>ACM MM 2023</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2023</div>
+  <div>
+    <div class="title">Where to Go Next for Recommender Systems? ID- vs. Modality-based Recommender Models Revisited</div>
+    <div class="meta">Zheng Yuan, Fajie Yuan, Yu Song, Youhua Li, Junchen Fu, Fei Yang, Yunzhu Pan and <b>Yongxin Ni</b> · <em>SIGIR 2023</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2022</div>
+  <div>
+    <div class="title">TUR: Utilizing Temporal Information to Make Unexpected E-commerce Recommendations</div>
+    <div class="meta"><b>Yongxin Ni</b>, Ningxia Wang, Li Chen, Lei Li and Rui Chen · <em>WISE 2022</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2022</div>
+  <div>
+    <div class="title">Global and Personalized Graphs for Heterogeneous Sequential Recommendation by Learning Behavior Transitions and User Intentions</div>
+    <div class="meta">Weixin Chen, Mingkai He, <b>Yongxin Ni</b>, Weike Pan and Zhong Ming · <em>RecSys 2022</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="journal">
+  <div class="year">2022</div>
+  <div>
+    <div class="title">Collaborative Filtering With Implicit Feedback via Learning Pairwise Preferences Over User-Groups and Item-Sets</div>
+    <div class="meta"><b>Yongxin Ni</b>, Ouyang Shan, Lin Li, Weike Pan and Zhong Ming · <em>CCF Transactions on Pervasive Computing and Interaction, 2022</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="journal">
+  <div class="year">2021</div>
+  <div>
+    <div class="title">Factored Heterogeneous Similarity Model for Recommendation with Implicit Feedback</div>
+    <div class="meta"><b>Yongxin Ni</b>, Xiancong Chen, Weike Pan, Zixiang Chen, and Zhong Ming · <em>Neurocomputing, 2021</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="conference">
+  <div class="year">2020</div>
+  <div>
+    <div class="title">Asymmetric Pairwise Preference Learning for Heterogeneous One-Class Collaborative Filtering</div>
+    <div class="meta"><b>Yongxin Ni</b>, Zhuoxin Zhan, Weike Pan, and Zhong Ming · <em>ICONIP 2020</em></div>
+  </div>
+</article>
+
+
+
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Agent Behaviorism: Exploring the Decision Making Behavior of LLM-based AI Agents</div>
+    <div class="meta"><b>Yongxin Ni</b>, Chunxiao Li*, Zhiqiang (Eric) Zheng, Youhua Li and Bin Gu · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Token Bayesian Optimization: Reasoning LLMs Think Better with the Right Length</div>
+    <div class="meta">Weihua Cheng, Tianyou Lu, Ersheng Ni, Yuling Wu, Joseph Liu, Jiayi Zhang, Sirui Hong, Jiaqi Chen, Yiqi Sun, Jincheng Fang, Chenglin Wu, Youhua Li and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">A Meta-Optimization Framework for Prompt Optimization via Search Trajectory Learning</div>
+    <div class="meta">Sibo Xu, Ersheng Ni, Jiaxin Wang, Weihua Cheng, Yuling Wu, Joseph Liu, Jiayi Zhang, Sirui Hong, Chunxiao Li, Hanwen Du, Jincheng Fang, Yiqi Sun, Mengmeng Chen, Jiaqi Chen, Chenglin Wu, Youhua Li and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">You Don't Know Until You Click: Automated GUI Testing for Production-Ready Software Evaluation</div>
+    <div class="meta">Yutong Bian, Xianhao Lin, Yupeng Xie, Tianyang Liu, Mingchen Zhuge, Siyuan Lu, Haoming Tang, Jinlin Wang, Jiayi Zhang, Jiaqi Chen, Xiangru Tang, <b>Yongxin Ni</b>, Sirui Hong and Chenglin Wu · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">PGT-PO: Plackett-Gumbel-Triplet Enhanced LLM for Preference Optimization in Machine Translation</div>
+    <div class="meta">Ningyuan Deng, Jiaqi Zhang, Hanwen Du, Youhua Li, Weihua Cheng, Shiyan Yang, Yanqing He and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">SOLAR: Serendipity Optimized Language Model Aligned for Recommendation</div>
+    <div class="meta">Zichen Yuan, Lifan Sun, Yucen Zhuang, Yue Wang, Xinyuan Song, Tianqi Xu, Siyuan Li, Junchen Fu, Youhua Li, Sirui Hong, Jiaqi Chen, Joemon M. Jose and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Denoising Diffusion Knowledge Tracing</div>
+    <div class="meta">Junhao Shen, Meisen Shu, Xinyu Fang, Hanwen Du, Weihua Cheng, Chunxiao Li, Lifan Sun, Yuling Wu, Zichen Yuan, Mengmeng Chen, Youhua Li and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Exploration Meets Correction: Parallel Generation and Execution-Guided Refinement for Optimization Modeling</div>
+    <div class="meta">Jiaxin Wang, Sibo Xu, Ersheng Ni, Hanwen Du, Tianyi Xu, Lifan Sun, Tianmin Sun, Jincheng Fang, Zichen Yuan, Weihua Cheng, Yiqi Sun, <b>Yongxin Ni</b> and Youhua Li · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Interpretable Knowledge Tracing via Explicit-Implicit Alignment</div>
+    <div class="meta">Ersheng Ni, Shuyan Xiong, Jiaxin Wang, Weihua Cheng, Sibo Xu, Tianyi Xu, Yuanqi He, Yinqiao Feng, Mengmeng Chen, <b>Yongxin Ni</b> and Youhua Li · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">SMKT-LLM: Semantic Mapping for Knowledge Tracing with Large Language Models</div>
+    <div class="meta">Jiaxin Wang, Ersheng Ni, Shuyan Xiong, Jiacheng Liu, <b>Yongxin Ni</b> and Youhua Li · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Mitigating Data Sparsity with Self-Supervised Contrastive Diffusion for Mamba-based Sequential Recommendation</div>
+    <div class="meta">Jiayang Wang, Yihan Liu, Hongji Li, Hanwen Du, Junchen Fu, Linkun Dai, Youhua Li, Joemon M. Jose and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">CROSSAN: Towards Efficient and Effective Adaptation of Multiple Multimodal Foundation Models for Sequential Recommendation</div>
+    <div class="meta">Junchen Fu, Hanwen Du, <b>Yongxin Ni*</b>, Joemon M. Jose, Alexandros Karatzoglou, Ioannis Arapakis, Youhua Li and Xuri Ge · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Adaptive Hypercomplex Embeddings for Efficient and Expressive Recommender System</div>
+    <div class="meta">Yihao Liu, Youhua Li, Kejie Huang, Xiaobing Feng, Jiachen Liu, Xinyuan Song, Min He* and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Bridging NIP and MLM: A Unified Meta-Learning Framework for Sequential Recommendation</div>
+    <div class="meta">Youhua Li, Yihao Liu, Junchen Fu, Hanwen Du, Yuanqi He and <b>Yongxin Ni*</b> · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Efficient and Effective Adaptation of Multimodal Foundation Models in Sequential Recommendation</div>
+    <div class="meta">Junchen Fu, Xuri Ge, Xin Xin, Alexandros Karatzoglou, Ioannis Arapakis, Kaiwen Zheng, <b>Yongxin Ni</b> and Joemon M Jose · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+<article class="pub" data-type="preprint">
+  <div class="year">2025</div>
+  <div>
+    <div class="title">Unleashing the Potential of Visual Recommendation Systems with PixelRec: Advancing Resource Innovation</div>
+    <div class="meta">Yu Cheng, Yunzhu Pan, Jiaqi Zhang, <b>Yongxin Ni</b>, Aixin Sun and Fajie Yuan · <em>(Under submission)</em></div>
+  </div>
+</article>
+
+
+
+
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service">
+      <h2>Service</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>PC Member/Reviewer of Conferences</strong>
+          <ul>
+            <li>ICLR  (2025)</li>
+            <li>WWW  (2025)</li>
+            <li>AAAI  (2025)</li>
+            <li>SIGIR  (2025)</li>
+            <li>MM  (2025)</li>
+            <li>WSDM  (2025)</li>
+            <li>ICME  (2025)</li>
+            <li>CIKM  (2025)</li>
+            <li>ICLR (2024)</li>
+            <li>WWW (2024)</li>
+            <li>MM (2024)</li>
+            <li>ICRA (2024)</li>
+            <li>WSDM (2024)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Reviewer of Journals</strong>
+          <ul>
+            <li>Nature Scientific Reports</li>
+            <li>IEEE Transactions on Image Processing</li>
+            <li>ACM Transactions on Information Systems</li>
+            <li>ACM Transactions on Recommender Systems</li>
+            <li>Information Processing & Management</li>
+            <li>Frontiers of Computer Science</li>
+            <li>IEEE Transactions on Multimedia</li>
+            <li>Knowledge and Information Systems</li>
+            <li>International Journal of Human–Computer Interaction</li>
+            <li>IEEE Transactions on Computational Social Systems</li>     
+            <li>IEEE Transactions on Knowledge and Data Engineering</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="yxin98@bu.edu">yxin98@bu.edu</a>; <a href="niyongxin@u.nus.edu">niyongxin@u.nus.edu</a>
+      </p>
+    </section>
+  </main>
+
+  <a class="top" href="#home" aria-label="Back to top">↑ Top</a>
+
+  <script>
+
+    const controls = document.querySelectorAll('.control');
+    const pubs = [...document.querySelectorAll('.pub')];
+
+    controls.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        controls.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        pubs.forEach(p=>{
+          if(f === 'all') {
+            p.style.display = 'grid';
+          } else {
+           p.style.display = (p.dataset.type === f) ? 'grid' : 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
